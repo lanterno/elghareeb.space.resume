@@ -1,0 +1,686 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Ahmed Elghareeb</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="32bc94ae-fd8d-43d9-9b5f-19c12d2194d2" class="page serif"><header><h1 class="page-title">Ahmed Elghareeb</h1><p class="page-description"></p></header><div class="page-body"><div id="599b4373-9b45-4817-91f2-4aa8514bc9e0" class="column-list"><div id="d3bf0f3d-a479-4e2f-99b9-9970b5f1edd8" style="width:68.75%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a72a1fcd-279e-4423-aa1b-aaa6a5638d7e"><div style="font-size:1.5em"><span class="icon">👋</span></div><div style="width:100%"><strong>(Research) Software Engineer</strong><p id="20fe926a-c46d-8077-9254-f08a03205e0a" class="">I studied Computer Engineering and embedded systems.<br/>Then shifted a bit and built a 10+ years career in Cloud development with Python. <br/></p><p id="20fe926a-c46d-80f4-8df1-cbf1a73ad12a" class="">Today, I’m shifting a bit more with a growing interest in Green Energy, Space tech, Cryptography/ Security &amp; Privacy, and a care for Sustainability in Software.</p><p id="20fe926a-c46d-80a6-9b48-f567611f65cb" class="">
+</p><p id="20fe926a-c46d-80e9-b8c5-cde5801a4d97" class="">💡 A research software Engineer is a generalist with a rich technical experience who works alongside researchers in different domains to advance their research with modern software tools and infrastructure.</p></div></figure></div><div id="6a9187b3-7165-4d97-b79f-afdc93e5590f" style="width:31.250000000000007%" class="column"><h3 id="6c0a335f-8e0c-4d4c-9d89-d445e2a061b4" class="">Vaud, Switzerland</h3><p id="ac25e056-99f8-4ed2-862e-b8462f1b7229" class="">📬   a@elghareeb.space</p><p id="59cf66c0-38cb-458f-9e19-43413cf2cfe5" class=""> 🖇️  <a href="http://www.linkedin.com/in/ahmedelghareeb">Linkedin</a></p><p id="02d7fea6-2d5f-4035-82e2-7af5a41ba7c5" class="">🐙   <a href="http://github.com/lanterno">github.com/lanterno</a></p><p id="7c1a95b0-91c0-4ee4-ab01-6ddd5c87963f" class="">
+</p></div></div><h2 id="e098e93b-ec36-423f-81d5-4d322e7712ea" class=""><mark class="highlight-orange"><strong>Tools of the trade</strong></mark></h2><p id="132e926a-c46d-8074-8843-c705c9bea575" class=""><strong>Programming Languages</strong>: Python, Typescript, Rust (new)</p><p id="20fe926a-c46d-8069-92cd-e3c09585f536" class=""><strong>Embedded Systems: </strong>C for microcontrollers, Processing for Arduino, LabView, VHDL for FPGA</p><p id="20fe926a-c46d-8082-b3c9-e2317602ed52" class=""><strong>AI development: </strong>LLMs, Librechat, Langchain, Copilot, Cursor, Azure OpenAI Studio</p><p id="132e926a-c46d-80ed-b1a5-edc7e179f034" class=""><strong>Frameworks</strong>: Django DRF, FastAPI — Vue.js, Qwik</p><p id="132e926a-c46d-807f-a194-efd812ae66ea" class=""><strong>API Specification</strong>: REST, GraphQL, OpenAPI</p><p id="132e926a-c46d-808f-b181-f842bd5b0489" class=""><strong>Backend Stack</strong>: Celery, RabbitMQ, Redis</p><p id="132e926a-c46d-80a7-881e-d0e749d82f19" class=""><strong>DATABASES</strong>: PostgreSQL, MongoDB</p><p id="132e926a-c46d-80a9-ae93-f675ab2d63e4" class=""><strong>Data stack</strong>: Metabase, Snowflake, Tableau, Airflow, Apache Spark</p><p id="132e926a-c46d-8040-866a-c6de05b057b9" class=""><strong>CI/CD</strong>: Git, GitHub Actions, Travis CI, CircleCI, Gitlab CI, Google Build</p><p id="132e926a-c46d-800a-b675-dce6e6512471" class=""><strong>DevOps</strong>: Containerization (Docker), Terraform, Serverless framework, Make</p><p id="132e926a-c46d-80e1-8785-d0c4d8a6a637" class=""><strong>Cloud Providers</strong>: Google Cloud Platform (GCP), AWS, Azure, Heroku, DigitalOcean</p><p id="132e926a-c46d-80b1-9ee7-d039a0bb10dc" class=""><strong>Google Cloud services</strong>: Google Build, Google Run, Artifact Registry, Cloud Storage, GKE, GCE, SQL</p><p id="132e926a-c46d-80a0-944e-fd736384b4d7" class=""><strong>AWS Services</strong>: EC2, S3, RDS, Aurora, Lambda, CloudFront, Cognito, API Gateway, Route53, etc.</p><p id="132e926a-c46d-8049-b879-c76b703dc192" class=""><strong>Observability</strong>: DataDog, Elastic, sentry, RollBar, different APM solutions</p><p id="132e926a-c46d-8006-9fcc-c8c06f8e2573" class=""><strong>Project Management Frameworks</strong>: Agile, Scrum, Kanban</p><hr id="51ff2698-23d7-4ab8-abe1-cff5697a0621"/><h2 id="50464689-286e-49e5-ac6b-8afdad258def" class="block-color-orange">Experience</h2><h3 id="6d2fd780-0dd6-43aa-a5be-979bb03cef4b" class="">Research Software Engineer</h3><p id="de2d408b-bb56-4c58-b4b8-e222fb5e301a" class=""><mark class="highlight-gray">Center for digital trust @ EPFL, Lausanne, Switzerland</mark><em><mark class="highlight-gray"> – (April 2023 - Current)<br/><br/></mark></em><em><mark class="highlight-default"><mark class="highlight-yellow_background">topics: Cryptography - E-ID - LLMs - Research papers - research teams - W3C </mark></mark></em></p><p id="8f4328f4-4ff4-4de8-b00d-31432988d7cc" class="">Working on various projects in Security and Privacy, ranging from Machine Learning, to BlockChain to Self-Sovereign Identities.<br/>Focusing on Security, and Cryptographic applications, specifically E-ID. I also working on researching the standards and system architectures for such a system. This includes decentralization, and massive scale deployment. (Think replacing IDs and passports).<br/><mark class="highlight-yellow_background"><br/><br/></mark>I also gained exposure to the research environment, working with researchers, reading papers, and build applications, and prototypes based on them.</p><h3 id="a5d51d61-6b5c-46b7-8beb-0f59d65798b5" class="">Senior Full Stack Software Engineer [<strong>Part-time </strong>Consulting role]</h3><p id="c5188db6-6495-4964-9814-aa36e0b11342" class=""><mark class="highlight-gray"><strong>Equality AI,  </strong></mark><em><mark class="highlight-gray">Remote – (February 2023 - July 2024)<br/><br/></mark></em><em><mark class="highlight-default"><mark class="highlight-yellow_background">topics: MLOps - LLMs (Langchain) -  </mark></mark></em><mark class="highlight-default"><mark class="highlight-yellow_background">Azure AI studio - </mark></mark><em><mark class="highlight-default"><mark class="highlight-yellow_background">Django</mark></mark></em><mark class="highlight-default"><mark class="highlight-yellow_background"> - Vue Js - Docker - Azure - Managed K8s</mark></mark></p><p id="ba6d17ea-c51e-45ff-8cbc-ed177f5cb9e2" class="">Leading a technical team of 4 people to build a machine leading dashboard with Jupyter lab-based notebooks feature in the browser. <br/>We also built an LLM-based ChatBot specialized in Fairness in ML. <br/>The team had limited resources, so I contributed a lot to<br/>-  backend (django)<br/>-  frontend (Vue.js)<br/>- completely rebooted DevOps (Azure managed K8s &amp; PAAS). <br/></p><h3 id="cab7099d-4874-42e7-b85c-5d67dc2c06d9" class="">Sabbatical</h3><p id="f870fa25-3c2b-4c29-9df1-db5e73f36a22" class="block-color-gray">Europe, Egypt<em> – (November 2022 - March 2023)<br/>Tinkering <br/></em>with latest technologies, and adjusting my career goals, while at the same time traveling the world.</p><h3 id="443e84e4-72e2-4216-b4af-1270c0a9dc1a" class=""><strong>Senior Software Engineer (Full-stack Developer)</strong></h3><p id="67e2a102-f4e8-4edd-ad97-061e79641bcb" class="block-color-gray"><strong><a href="https://conkiwi.com">Kiwi</a></strong><em>, Lausanne, Switzerland – (Feb 2021 - October 2022)<br/><br/></em><em><mark class="highlight-default"><mark class="highlight-yellow_background">topics: </mark></mark></em><mark class="highlight-default"><mark class="highlight-yellow_background">Fintech - AWS - Python/Django - Docker - API Design - Scalable -  Celery - Metabase - Airflow</mark></mark></p><ul id="d3aa362f-92a6-46bc-a2c6-14052ff8cda8" class="bulleted-list"><li style="list-style-type:disc">Training junior developers, guiding Mid-levels, and leading other developers on project-basis.</li></ul><ul id="14ce926a-c46d-8015-bd6c-f9ee0f03d59c" class="bulleted-list"><li style="list-style-type:disc">Setting best practices, and working on design documents.</li></ul><ul id="f1ae21ad-683c-4b66-8ea4-dc55f4953417" class="bulleted-list"><li style="list-style-type:disc">Full-stack engineer in the team responsible for internal users dashboard<ul id="dd204e90-0f14-4d78-81b3-6e96172b1481" class="bulleted-list"><li style="list-style-type:circle">Started the migration from django templates to VueJS.</li></ul></li></ul><ul id="616d1239-43dc-42d9-8649-7f23741a3b71" class="bulleted-list"><li style="list-style-type:disc">System design: Moved from spaghetti monolith to modular monolith, and planned migration to services<ul id="361fd370-5970-47c2-a5f9-432a25b800d7" class="bulleted-list"><li style="list-style-type:circle">Led a project to start operating in Colombia</li></ul><ul id="64b77042-034f-4c15-99d8-2112a1f82881" class="bulleted-list"><li style="list-style-type:circle">Redesigned the whole micro-loan product into a more robust and extensible system</li></ul></li></ul><ul id="d8c867a0-6cba-41e3-a55a-ca856c12ccbb" class="bulleted-list"><li style="list-style-type:disc">Worked in an international environment with two main offices in Mexico city, and Lausanne, Switzerland.</li></ul><h3 id="b2d7976a-cc29-4c02-b459-be2f88032ec5" class="">Senior Software Engineer</h3><p id="a5decab7-4d44-49bc-b087-460157ae9935" class="block-color-gray"><strong><a href="https://backmarket.fr">BackMarket</a></strong><em>, Paris, France – (Jan 2019 - Feb 2021)<br/><br/></em><em><mark class="highlight-default"><mark class="highlight-yellow_background">topics: E-commerce - AWS - Python/Django - Docker - K8s - API Design &amp; standards - Airflow - MySQL - Celery</mark></mark></em></p><ul id="f5f1c867-83d8-4fe8-80fa-c10641585a11" class="bulleted-list"><li style="list-style-type:disc">Focused on the back-office for internal staff and merchants. <ul id="ac420d21-6dce-4bff-862a-3dc76465a303" class="bulleted-list"><li style="list-style-type:disc">Direct interactions with internal and external customers.</li></ul><ul id="b2a4bb9c-3b74-4922-900e-c4273af17f26" class="bulleted-list"><li style="list-style-type:disc">Integrations with many 3rd party services like Salesforce.</li></ul></li></ul><ul id="98e10530-cdcb-48e3-92cc-feb24d2eea2e" class="bulleted-list"><li style="list-style-type:disc">Improved and maintained the product catalog<ul id="e0cffe4c-89f0-4a4a-ae36-6be768617ec4" class="bulleted-list"><li style="list-style-type:circle">Having a massive catalog of products in many languages, there was constant improvements in performance, and scalability.</li></ul></li></ul><ul id="cd123d93-3bef-44d6-bf60-798149023f93" class="bulleted-list"><li style="list-style-type:disc">Country management: streamline opening new countries with small friction (This evolved in the next job as well)</li></ul><h3 id="6a8d414e-7f68-4f79-a23c-aa012f237f6c" class="">Senior Django Web Developer</h3><p id="58fc0e77-3eda-407a-83cc-77f68854ad13" class="block-color-gray"><strong><a href="https://cloud.stc.com.sa/">STC Solutions</a></strong><em>, Cairo, Egypt – (Oct 2017 - August 2018)<br/><br/></em><em><mark class="highlight-default"><mark class="highlight-yellow_background">topics: Cloud Provider - Python/Django - PostgreSQL - Docker - Celery - Services O. A. - RabbitMQ</mark></mark></em></p><ul id="73dda830-da60-440c-a7d1-f9de0172dec2" class="bulleted-list"><li style="list-style-type:disc">STCs is a cloud provider in the middle-east. My job was to build and maintain the <br/>marketplace for their services, and manage the highly complex billing system.<br/></li></ul><ul id="b723d624-62b7-47e3-8513-11338498c9b2" class="bulleted-list"><li style="list-style-type:disc">Working in a large organization of 800 people across different physical locations, and departments.</li></ul><h3 id="68f3ac95-1a29-4880-88a7-91f9907f79ca" class="">Django Lead developer</h3><p id="cdd0672c-07e8-4023-ba99-793f9c9e31d6" class="block-color-gray">cubeEgypt,<em> Mansoura, Egypt – (Aug 2014 - Oct 2017)</em></p><p id="1ece926a-c46d-800e-898c-c6a2ae2c9929" class=""><em><mark class="highlight-yellow_background">topics: python, django, frontend, EduTech</mark></em></p><p id="9372c9df-53b0-493f-9ebe-48c696062f04" class="">Started my professional career at Cube, but only after two years, I was leading a team of developers.<br/>Although a bit too early, I was able to gain a lot from that experience to be a more efficient engineer later on.<br/>I worked on a myriad of projects from exotic mobile apps to automatic assessment education systems to E-commerce.<br/></p><hr id="81f9d822-49ee-4fb4-a704-cffb6aa515a3"/><h2 id="73020b52-7f2b-4897-9542-b6b83e5c7d16" class="block-color-orange"><mark class="highlight-orange">Languages</mark></h2><div id="1ece926a-c46d-8082-8776-fb6bf03a892c" class="column-list"><div id="1ece926a-c46d-80ef-9b90-d315e00e4fc9" style="width:25%" class="column"><p id="1ece926a-c46d-80b8-9c26-e9026ea422ee" class="">English 🇬🇧</p><p id="1ece926a-c46d-80e3-aff7-d6f09cfe6e01" class="">Native</p></div><div id="1ece926a-c46d-80f0-9a75-d7420f6c1f10" style="width:25%" class="column"><p id="1ece926a-c46d-8051-ae2f-c7dffaff84d4" class="">Arabic 🇪🇬</p><p id="1ece926a-c46d-8096-a5b4-d718b41026b2" class="">Native</p></div><div id="1ece926a-c46d-8052-988b-f1978cdfa2f4" style="width:25%" class="column"><p id="1ece926a-c46d-807f-b524-fca728dfc69e" class="">French 🇨🇭</p><p id="1ece926a-c46d-80a2-85f9-f658eac342c3" class="">B1</p></div><div id="1ece926a-c46d-80a6-a2f8-edc8480b62e8" style="width:25%" class="column"><p id="1ece926a-c46d-806a-b0cc-e192a147851e" class="">Japanese 🇯🇵</p><p id="1ece926a-c46d-8044-a405-f5be939b1d86" class="">Elementary A1</p></div></div><hr id="159c8e4c-869f-4349-b8f9-c7898852acc0"/><h2 id="20fe926a-c46d-8016-8448-e4a2bad02b27" class=""><mark class="highlight-orange">Recent Courses (2024/25)</mark></h2><ul id="20fe926a-c46d-8030-9a4e-da3340fcd966" class="bulleted-list"><li style="list-style-type:disc">Cryptography @ Stanford Online </li></ul><ul id="20fe926a-c46d-80e8-acb0-cae68a0bcc40" class="bulleted-list"><li style="list-style-type:disc">Sustainability Robotics @ EPFL Campus</li></ul><ul id="20fe926a-c46d-80bf-9ce6-c6041039ddb7" class="bulleted-list"><li style="list-style-type:disc">AI safety and Ethics @ the center for AI safety online</li></ul><h2 id="0de204cd-1521-4c3c-80d7-c634778f0e30" class=""><mark class="highlight-orange">Education</mark></h2><div id="20fe926a-c46d-8015-9d1f-c74ce8ce306a" class="column-list"><div id="20fe926a-c46d-806e-b7ed-fef141b121b7" style="width:75%" class="column"><h3 id="20fe926a-c46d-80d2-b2cc-f68de776e82a" class="">Climate Tech Fellowship</h3><p id="20fe926a-c46d-8028-acdc-c6acd808aa12" class=""><em><mark class="highlight-yellow_background">topics: Climate Tech &amp; Climate efforts - Incorporating sustainability into my workflow</mark></em></p><p id="14be926a-c46d-80c3-8827-cd5d8628bdd7" class="">This program investigated many domains with a lens focusing on the climate aspects. <br/>The most interesting fields for me were the energy, transportation, and agriculture sectors.<br/></p><p id="14be926a-c46d-8052-9aea-db009d9dd9a8" class="">The program included huge research materials that I&#x27;m still going through today.</p><p id="14be926a-c46d-80de-a95b-e7cc6a71f860" class="">Follow up after this program:</p><ul id="14be926a-c46d-80ce-8be0-f045b2ffe355" class="bulleted-list"><li style="list-style-type:disc">I&#x27;m working with the ClimateRoboticsNetworks non-profit</li></ul><ul id="14be926a-c46d-8015-be02-ff05bcf958e9" class="bulleted-list"><li style="list-style-type:disc">I started a working group on Sustainable IT in my research institution (sponsored by the Research Software Engineering community @ EPFL)</li></ul><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1ece926a-c46d-80bd-95d1-e32706ce0a87"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><p id="1ece926a-c46d-8009-a9fc-d820710cba5f" class="">→ I Gave two talk on “Environmental Impact of AI supply chain” at EPFL</p></div></figure></div><div id="20fe926a-c46d-809a-89fc-f422a1e181c4" style="width:25%" class="column"><h3 id="20fe926a-c46d-80fb-8ac0-ccfdabd73549" class="">Climatebase</h3><p id="20fe926a-c46d-8082-affb-cd0cd7782809" class=""><em><a href="http://Climatebase.org">Climatebase.org</a></em></p><p id="20fe926a-c46d-80a2-948a-f39ee10c4a3a" class=""><em>Cohort 6 / Sept - Nov 2024</em></p><p id="20fe926a-c46d-804e-b9dd-c9c35d8950c4" class="">
+</p></div></div><div id="1ece926a-c46d-80ee-9b8b-dc3ec62467f4" class="column-list"><div id="1ece926a-c46d-80db-8066-f322c18c1684" style="width:75%" class="column"><h3 id="1ece926a-c46d-80ab-b1ef-fcf86c7d380c" class="">MicroMasters on Statistics and Data Science</h3><p id="1ece926a-c46d-80e8-acb6-c49948e84b03" class="">A series of courses provided by MIT online through the <a href="http://edx.org">edx.org</a> platform<br/> on topics like Machine learning and statistical analysis.<br/></p></div><div id="1ece926a-c46d-806f-b92a-d6620022a006" style="width:25%" class="column"><h3 id="1ece926a-c46d-809a-b9d3-c9bddc65d65f" class="">MITx on EdX</h3><p id="1ece926a-c46d-802d-9e70-dd277d1a372e" class="">2019 - 2023</p></div></div><div id="14be926a-c46d-806c-ace5-c8404d2a0007" class="column-list"><div id="7a742d0c-17a1-4423-9e28-78c0947e958d" style="width:106.25%" class="column"><h3 id="d3e6c5ab-6ef0-4a78-9788-96de191d655e" class=""><strong>Bachelor&#x27;s Degree in Computer Engineering</strong></h3><p id="20fe926a-c46d-80d5-976e-d9697d545cce" class="">5-year bachelor degree. <br/>Studied Systems Engineering, Control Systems, Software Engineering.<br/>Along with Elective courses on FPGA, and Microcontrollers. <br/></p></div><div id="9fc6d9bf-0982-4167-9e28-83f77edcf667" style="width:37.49999999999999%" class="column"><h3 id="8f84d36f-a222-4b79-b83f-894b9a8a91cb" class="">Mansoura University</h3><p id="fcf27adb-438d-4a5b-9a05-cd202c5ea8b8" class="">2011 - 2016</p></div></div><h2 id="14ce926a-c46d-801b-9732-d229e3e24848" class=""><mark class="highlight-orange">Non-Profits and other activities</mark></h2><div id="14ce926a-c46d-80bf-9b2a-e79e1fa5bd9c" class="column-list"><div id="fbdfc9ee-49e5-413f-83ba-33d2944a47b6" style="width:43.75%" class="column"><h3 id="1098c5a7-86dd-45df-8440-534802cd3df5" class=""><strong>Climate Robotics Network (C.R.N.) </strong></h3><p id="14ce926a-c46d-801c-87b3-d374ac781734" class="">Recent active member of the C.R.N. non-profit, where we care about Climate, and robotics, and how their integration can save the world!</p></div><div id="780f018c-2f99-4382-8ba9-1928a225e86e" style="width:56.25%" class="column"><h3 id="7be11b60-b142-47d2-b6f1-aa24381ba61a" class=""><strong>R.S.E. Sustainable IT workgroup</strong></h3><p id="14ce926a-c46d-809c-a8fb-e6baf72cfcc2" class="">Within EPFL, started a working group of people interested in sustainability within IT. This  group is part of the Research Software engineers community at EPFL. </p></div></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
